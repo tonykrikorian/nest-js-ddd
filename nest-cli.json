@@ -1,0 +1,30 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/backend/infrastructure/init",
+  "monorepo": true,
+  "root": "apps/backend",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/backend/tsconfig.app.json"
+  },
+  "projects": {
+    "backend": {
+      "type": "application",
+      "root": "apps/backend",
+      "entryFile": "main",
+      "sourceRoot": "apps/backend/infrastructure/init",
+      "compilerOptions": {
+        "tsConfigPath": "apps/backend/tsconfig.app.json"
+      }
+    },
+    "example": {
+      "type": "library",
+      "root": "libs/example",
+      "entryFile": "index",
+      "sourceRoot": "libs/example",
+      "compilerOptions": {
+        "tsConfigPath": "libs/example/tsconfig.lib.json"
+      }
+    }
+  }
+}
